@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ASchoolModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Enroll">
+          <Key>
+            <PropertyRef Name="switch" />
+          </Key>
+          <Property Name="switch" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="int" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="role" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SC">
+          <Key>
+            <PropertyRef Name="snum" />
+            <PropertyRef Name="cnum" />
+          </Key>
+          <Property Name="snum" Type="int" Nullable="false" />
+          <Property Name="cnum" Type="int" Nullable="false" />
+          <Property Name="score" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TableCourse">
+          <Key>
+            <PropertyRef Name="cnum" />
+          </Key>
+          <Property Name="cnum" Type="int" Nullable="false" />
+          <Property Name="cname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="tnum" Type="int" />
+        </EntityType>
+        <EntityType Name="TableStudent">
+          <Key>
+            <PropertyRef Name="snum" />
+          </Key>
+          <Property Name="snum" Type="int" Nullable="false" />
+          <Property Name="sname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="sclass" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TableTeacher">
+          <Key>
+            <PropertyRef Name="tnum" />
+          </Key>
+          <Property Name="tnum" Type="int" Nullable="false" />
+          <Property Name="tname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="cname" Type="varchar" MaxLength="50" />
+          <Property Name="cnum" Type="int" />
+        </EntityType>
+        <EntityContainer Name="ASchoolModelStoreContainer">
+          <EntitySet Name="Enroll" EntityType="Self.Enroll" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SC" EntityType="Self.SC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TableCourse" EntityType="Self.TableCourse" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TableStudent" EntityType="Self.TableStudent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TableTeacher" EntityType="Self.TableTeacher" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ASchoolModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Enroll">
+          <Key>
+            <PropertyRef Name="switch" />
+          </Key>
+          <Property Name="switch" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="Int32" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SC">
+          <Key>
+            <PropertyRef Name="snum" />
+            <PropertyRef Name="cnum" />
+          </Key>
+          <Property Name="snum" Type="Int32" Nullable="false" />
+          <Property Name="cnum" Type="Int32" Nullable="false" />
+          <Property Name="score" Type="Int32" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TableCourse">
+          <Key>
+            <PropertyRef Name="cnum" />
+          </Key>
+          <Property Name="cnum" Type="Int32" Nullable="false" />
+          <Property Name="cname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tnum" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TableStudent">
+          <Key>
+            <PropertyRef Name="snum" />
+          </Key>
+          <Property Name="snum" Type="Int32" Nullable="false" />
+          <Property Name="sname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sclass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TableTeacher">
+          <Key>
+            <PropertyRef Name="tnum" />
+          </Key>
+          <Property Name="tnum" Type="Int32" Nullable="false" />
+          <Property Name="tname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cnum" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="ASchoolContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Enrolls" EntityType="Self.Enroll" />
+          <EntitySet Name="Logins" EntityType="Self.Login" />
+          <EntitySet Name="SCs" EntityType="Self.SC" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="TableCourses" EntityType="Self.TableCourse" />
+          <EntitySet Name="TableStudents" EntityType="Self.TableStudent" />
+          <EntitySet Name="TableTeachers" EntityType="Self.TableTeacher" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ASchoolModelStoreContainer" CdmEntityContainer="ASchoolContext">
+          <EntitySetMapping Name="Enrolls">
+            <EntityTypeMapping TypeName="ASchoolModel.Enroll">
+              <MappingFragment StoreEntitySet="Enroll">
+                <ScalarProperty Name="switch" ColumnName="switch" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logins">
+            <EntityTypeMapping TypeName="ASchoolModel.Login">
+              <MappingFragment StoreEntitySet="Login">
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="role" ColumnName="role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SCs">
+            <EntityTypeMapping TypeName="ASchoolModel.SC">
+              <MappingFragment StoreEntitySet="SC">
+                <ScalarProperty Name="snum" ColumnName="snum" />
+                <ScalarProperty Name="cnum" ColumnName="cnum" />
+                <ScalarProperty Name="score" ColumnName="score" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="ASchoolModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TableCourses">
+            <EntityTypeMapping TypeName="ASchoolModel.TableCourse">
+              <MappingFragment StoreEntitySet="TableCourse">
+                <ScalarProperty Name="cnum" ColumnName="cnum" />
+                <ScalarProperty Name="cname" ColumnName="cname" />
+                <ScalarProperty Name="tnum" ColumnName="tnum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TableStudents">
+            <EntityTypeMapping TypeName="ASchoolModel.TableStudent">
+              <MappingFragment StoreEntitySet="TableStudent">
+                <ScalarProperty Name="snum" ColumnName="snum" />
+                <ScalarProperty Name="sname" ColumnName="sname" />
+                <ScalarProperty Name="sclass" ColumnName="sclass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TableTeachers">
+            <EntityTypeMapping TypeName="ASchoolModel.TableTeacher">
+              <MappingFragment StoreEntitySet="TableTeacher">
+                <ScalarProperty Name="tnum" ColumnName="tnum" />
+                <ScalarProperty Name="tname" ColumnName="tname" />
+                <ScalarProperty Name="cname" ColumnName="cname" />
+                <ScalarProperty Name="cnum" ColumnName="cnum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

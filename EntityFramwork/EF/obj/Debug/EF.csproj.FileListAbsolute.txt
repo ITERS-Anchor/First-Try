@@ -1,0 +1,1 @@
+C:\.Net learning\EntityFramwork\EF\bin\Debug\EF.exe.config

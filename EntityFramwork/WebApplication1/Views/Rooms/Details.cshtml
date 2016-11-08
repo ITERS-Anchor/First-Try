@@ -1,0 +1,58 @@
+﻿@model WebApplication1.Models.Room
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Room</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BedNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BedNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GustNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GustNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomType1.TypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomType1.TypeName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RoomNum }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

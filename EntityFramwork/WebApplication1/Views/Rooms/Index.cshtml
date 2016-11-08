@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WebApplication1.Models.Room>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BedNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GustNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomType1.TypeName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BedNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GustNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomType1.TypeName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RoomNum }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RoomNum }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RoomNum })
+        </td>
+    </tr>
+}
+
+</table>
