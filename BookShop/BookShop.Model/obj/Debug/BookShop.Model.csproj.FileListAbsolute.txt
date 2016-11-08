@@ -1,0 +1,5 @@
+C:\.Net learning\BookShop\BookShop.Model\bin\Debug\BookShop.Model.dll
+C:\.Net learning\BookShop\BookShop.Model\bin\Debug\BookShop.Model.pdb
+C:\.Net learning\BookShop\BookShop.Model\obj\Debug\BookShop.Model.dll
+C:\.Net learning\BookShop\BookShop.Model\obj\Debug\BookShop.Model.pdb
+C:\.Net learning\BookShop\BookShop.Model\obj\Debug\BookShop.Model.csprojResolveAssemblyReference.cache

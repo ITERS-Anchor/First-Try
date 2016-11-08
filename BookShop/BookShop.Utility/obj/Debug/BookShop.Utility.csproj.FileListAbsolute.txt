@@ -1,0 +1,7 @@
+C:\.Net learning\BookShop\BookShop.Utility\bin\Debug\BookShop.Utility.dll
+C:\.Net learning\BookShop\BookShop.Utility\bin\Debug\BookShop.Utility.pdb
+C:\.Net learning\BookShop\BookShop.Utility\obj\Debug\BookShop.Utility.dll
+C:\.Net learning\BookShop\BookShop.Utility\obj\Debug\BookShop.Utility.pdb
+C:\.Net learning\BookShop\BookShop.Utility\obj\Debug\BookShop.Utility.csprojResolveAssemblyReference.cache
+C:\.Net learning\BookShop\BookShop.Utility\bin\Debug\Newtonsoft.Json.dll
+C:\.Net learning\BookShop\BookShop.Utility\bin\Debug\Newtonsoft.Json.xml

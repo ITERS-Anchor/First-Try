@@ -1,0 +1,13 @@
+C:\.Net learning\BookShop\BookShop.BLL\bin\Debug\BookShop.BLL.dll
+C:\.Net learning\BookShop\BookShop.BLL\bin\Debug\BookShop.BLL.pdb
+C:\.Net learning\BookShop\BookShop.BLL\bin\Debug\BookShop.DAL.dll
+C:\.Net learning\BookShop\BookShop.BLL\bin\Debug\BookShop.Model.dll
+C:\.Net learning\BookShop\BookShop.BLL\bin\Debug\BookShop.Utility.dll
+C:\.Net learning\BookShop\BookShop.BLL\bin\Debug\BookShop.DAL.pdb
+C:\.Net learning\BookShop\BookShop.BLL\bin\Debug\BookShop.Model.pdb
+C:\.Net learning\BookShop\BookShop.BLL\bin\Debug\BookShop.Utility.pdb
+C:\.Net learning\BookShop\BookShop.BLL\obj\Debug\BookShop.BLL.csprojResolveAssemblyReference.cache
+C:\.Net learning\BookShop\BookShop.BLL\obj\Debug\BookShop.BLL.dll
+C:\.Net learning\BookShop\BookShop.BLL\obj\Debug\BookShop.BLL.pdb
+C:\.Net learning\BookShop\BookShop.BLL\bin\Debug\Newtonsoft.Json.dll
+C:\.Net learning\BookShop\BookShop.BLL\bin\Debug\Newtonsoft.Json.xml
